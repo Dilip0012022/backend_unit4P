@@ -6,6 +6,9 @@ const {userRouter}=require("./routes/user.routes")
 const app=express()
 app.use(cors)
 app.use(express.json())
+app.get("/",(req,res)=>{
+    res.send("Done")
+})
 app.use("/users",userRouter)
 
 app.listen(8080,async()=>{
